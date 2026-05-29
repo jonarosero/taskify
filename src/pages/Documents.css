@@ -1,0 +1,172 @@
+.docs-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.docs-body {
+  flex: 1;
+  padding: 20px 24px;
+}
+
+.docs-path-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 16px;
+}
+
+.docs-path {
+  font-size: 12px;
+  color: var(--text-subtle);
+  font-family: var(--font-mono);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.docs-file-count {
+  font-size: 11px;
+  color: var(--text-disabled);
+  flex-shrink: 0;
+}
+
+/* Toolbar */
+.docs-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+/* Type chips */
+.docs-type-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.docs-type-chip {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-subtle);
+}
+.docs-type-chip strong {
+  color: var(--text);
+  margin-left: 3px;
+}
+
+/* Group */
+.docs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.docs-group { margin-bottom: 12px; }
+
+.docs-folder-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-subtle);
+}
+
+.docs-folder-count {
+  font-size: 10px;
+  background: var(--border);
+  padding: 1px 6px;
+  border-radius: 10px;
+  color: var(--text-subtle);
+}
+
+/* File list */
+.docs-file-list {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.docs-file-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.docs-file-row:last-child { border-bottom: none; }
+.docs-file-row:hover { background: var(--bg); }
+
+.docs-file-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.docs-file-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.docs-file-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.docs-file-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.docs-file-type {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.docs-file-size {
+  font-size: 10px;
+  color: var(--text-disabled);
+}
+
+.docs-open-btn {
+  background: none; border: none;
+  color: var(--text-subtle);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: var(--radius);
+  display: flex; align-items: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.docs-file-row:hover .docs-open-btn { opacity: 1; }
+.docs-open-btn:hover { background: var(--border); color: var(--text); }

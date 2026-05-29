@@ -1,0 +1,187 @@
+/* ─── Choose screen ─── */
+.share-desc {
+  font-size: 13px;
+  color: var(--text-subtle);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.share-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.share-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  cursor: pointer;
+  font-family: var(--font);
+  text-align: left;
+  transition: all 0.18s ease;
+  width: 100%;
+}
+.share-option:hover {
+  border-color: var(--blue-primary);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
+}
+
+.share-option-icon {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.share-option-info { flex: 1; min-width: 0; }
+
+.share-option-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.share-option-desc {
+  font-size: 12px;
+  color: var(--text-subtle);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.share-option-includes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.share-chip {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-subtle);
+}
+
+/* ─── Progress screen ─── */
+.share-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.share-spinner { margin-bottom: 4px; }
+
+.share-progress h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.share-progress p {
+  font-size: 13px;
+  color: var(--text-subtle);
+  line-height: 1.55;
+}
+
+.share-progress-bar-wrap {
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.share-progress-bar-anim {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue-primary), var(--teal), var(--blue-primary));
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease infinite;
+  border-radius: 3px;
+  width: 100%;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Build log ─── */
+.share-log {
+  width: 100%;
+  max-height: 160px;
+  overflow-y: auto;
+  background: #1D2125;
+  border: 1px solid #3B4248;
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-align: left;
+  color: #C7D1DB;
+  margin-top: 4px;
+}
+
+.share-log-line {
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* ─── Result screen ─── */
+.share-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.share-result h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.share-result p {
+  font-size: 13px;
+  color: var(--text-subtle);
+  line-height: 1.5;
+}
+
+.share-path {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-subtle);
+  background: var(--bg);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  word-break: break-all;
+  text-align: left;
+  width: 100%;
+}
+
+.share-hint-text {
+  font-size: 12px;
+  color: var(--text-disabled);
+  background: var(--bg);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  line-height: 1.5;
+}

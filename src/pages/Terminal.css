@@ -1,0 +1,76 @@
+.term-page {
+  display: flex; flex-direction: column;
+  height: 100%; overflow: hidden;
+  background: #282A36;  /* Dracula bg */
+}
+
+.term-page--fullscreen {
+  position: fixed; inset: 0; z-index: 9999;
+}
+
+/* Disabled state */
+.term-disabled {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  flex: 1; gap: 12px; text-align: center; padding: 40px;
+  background: var(--bg);
+}
+.term-disabled-icon {
+  font-size: 40px; font-family: monospace; color: var(--blue-primary);
+  font-weight: 700;
+}
+.term-disabled h3 { font-size: 18px; font-weight: 700; color: var(--text); }
+.term-disabled p  { font-size: 13px; color: var(--text-subtle); line-height: 1.6; max-width: 400px; }
+
+/* Top bar */
+.term-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 3px 10px;
+  background: #21222C;
+  border-bottom: 1px solid #44475A;
+  flex-shrink: 0; gap: 10px; min-height: 24px;   /* ultra compact */
+}
+
+.term-topbar-path {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; font-family: "Cascadia Code", "Fira Code", monospace;
+  color: #F8F8F2; min-width: 0; overflow: hidden;
+  white-space: nowrap; text-overflow: ellipsis;
+}
+.term-topbar-path strong { color: #BD93F9; font-weight: 700; }
+.term-topbar-path code  { color: #8BE9FD; font-size: 11px; overflow: hidden; text-overflow: ellipsis; }
+.term-topbar-sep { color: #6272A4; }
+
+.term-topbar-actions {
+  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+}
+
+.term-install-hint {
+  font-size: 10px; color: #6272A4;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 400px;
+}
+.term-install-hint code {
+  font-family: "Cascadia Code", monospace; color: #F1FA8C; font-size: 10px;
+}
+
+.term-ext-link {
+  color: #6272A4; display: flex; align-items: center;
+  padding: 2px; border-radius: 3px; transition: color 0.15s;
+}
+.term-ext-link:hover { color: #BD93F9; }
+
+.term-icon-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px; color: #6272A4;
+  cursor: pointer; transition: all 0.15s;
+}
+.term-icon-btn:hover { background: rgba(189,147,249,0.15); color: #BD93F9; border-color: #BD93F9; }
+
+/* Terminal area */
+.term-embed-area {
+  flex: 1; overflow: hidden;
+  display: flex; flex-direction: column;
+}

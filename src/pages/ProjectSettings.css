@@ -1,0 +1,324 @@
+.pset-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.pset-body {
+  flex: 1;
+  padding: 24px 28px;
+}
+
+.pset-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* ─── Section ─── */
+.pset-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.pset-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--blue-primary);
+}
+
+.pset-section-header h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ─── Field ─── */
+.pset-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.pset-field:last-child { margin-bottom: 0; }
+
+.pset-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pset-hint {
+  font-size: 11px;
+  color: var(--text-disabled);
+}
+.pset-hint code { font-family: var(--font-mono); font-size: 11px; }
+
+.pset-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* ─── Year selector ─── */
+.pset-year-selector {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pset-year-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text-subtle);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: all var(--transition);
+}
+.pset-year-btn:hover { border-color: var(--blue-primary); color: var(--text); }
+.pset-year-btn.active {
+  border-color: var(--blue-primary);
+  background: var(--blue-primary);
+  color: #fff;
+}
+
+/* ─── Member cards ─── */
+.pset-member-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pset-member-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: all var(--transition);
+  text-align: left;
+  position: relative;
+}
+.pset-member-card:hover { border-color: var(--blue-primary); }
+.pset-member-card.active { box-shadow: var(--shadow-sm); }
+
+.pset-member-info { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
+.pset-member-name { font-size: 13px; font-weight: 600; color: var(--text); }
+.pset-member-role { font-size: 11px; color: var(--text-subtle); }
+
+.pset-leader-badge {
+  font-size: 10px; font-weight: 700;
+  padding: 2px 7px; border-radius: 10px;
+  color: #fff; text-transform: uppercase;
+  letter-spacing: 0.3px; flex-shrink: 0;
+}
+
+/* ─── Team chips ─── */
+.pset-team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pset-team-chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-subtle);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: all var(--transition);
+}
+.pset-team-chip:hover { border-color: var(--blue-primary); color: var(--text); }
+.pset-team-chip.active { font-weight: 600; }
+
+/* ─── Extra members ─── */
+.pset-extra-members {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.pset-extra-member-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+.pset-extra-member-row:last-child { border-bottom: none; }
+.pset-extra-member-row:hover { background: var(--surface); }
+
+.pset-extra-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800;
+  color: #fff; flex-shrink: 0;
+  user-select: none;
+}
+
+.pset-extra-member-info { flex: 1; min-width: 0; }
+
+.pset-icon-btn {
+  background: none; border: none;
+  cursor: pointer; padding: 4px;
+  border-radius: var(--radius);
+  display: flex; align-items: center;
+  transition: background var(--transition);
+  flex-shrink: 0;
+}
+.pset-icon-btn:hover { background: #FFEBE6; }
+
+/* ─── Tags ─── */
+.pset-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pset-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.pset-tag-remove {
+  background: none; border: none;
+  cursor: pointer; padding: 1px;
+  display: flex; align-items: center;
+  opacity: 0.7; transition: opacity var(--transition);
+  color: inherit;
+}
+.pset-tag-remove:hover { opacity: 1; }
+
+.pset-add-tag-btn {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 12px; font-weight: 500;
+  padding: 4px 12px;
+  border: 1.5px dashed var(--border);
+  border-radius: 20px;
+  background: none;
+  color: var(--text-subtle);
+  cursor: pointer; font-family: var(--font);
+  transition: all var(--transition);
+}
+.pset-add-tag-btn:hover { border-color: var(--blue-primary); color: var(--blue-primary); }
+
+.pset-tag-form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.15s ease;
+}
+
+.pset-color-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pset-color-dot {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer; transition: all var(--transition);
+}
+.pset-color-dot.active { border-color: var(--text); transform: scale(1.2); }
+.pset-color-dot:hover { transform: scale(1.15); }
+
+/* ─── Danger zone ─── */
+.pset-section--danger { border-color: var(--red); }
+.pset-section--danger .pset-section-header { border-bottom-color: #FFBDAD; }
+[data-theme="dark"] .pset-section--danger .pset-section-header { border-bottom-color: #5C1A0A; }
+
+.pset-danger-row {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 16px;
+}
+
+/* ─── Agent toggle ─── */
+.pset-agent-toggle { display: flex; align-items: center; }
+.pset-agent-label {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; font-weight: 500; color: var(--text);
+  cursor: pointer;
+}
+.pset-agent-label input { width: 16px; height: 16px; cursor: pointer; accent-color: var(--blue-primary); }
+
+/* ─── Folder ─── */
+.pset-folder-row {
+  display: flex; gap: 8px; align-items: center;
+}
+.pset-folder-row input { flex: 1; }
+
+.pset-folder-info {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.pset-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-subtle);
+}
+.pset-info-row code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+  background: var(--surface);
+  padding: 1px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
